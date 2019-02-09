@@ -56,7 +56,7 @@ namespace OpenSage.Gui.Apt.ActionScript
                 }
 
                 InstructionBase instruction = null;
-                List<Value> parameters = new List<Value>();
+                var parameters = new List<Value>();
 
                 switch (type)
                 {
@@ -191,6 +191,9 @@ namespace OpenSage.Gui.Apt.ActionScript
                         break;
                     case InstructionType.BitwiseXOr:
                         instruction = new BitwiseXOr();
+                        break;
+                    case InstructionType.ShiftRight2:
+                        instruction = new ShiftRight2();
                         break;
                     case InstructionType.Greater:
                         instruction = new Greater();
